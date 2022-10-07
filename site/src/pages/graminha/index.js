@@ -1,5 +1,5 @@
 import './index.scss'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Grama() {
     const[Grama, SetGrama ] = useState(0);
@@ -8,16 +8,33 @@ export default function Grama() {
     function Calcular(){
         let total = 0;
 
-        if(Grama > 1000){
-            total - (Grama / 100 ) * 3;
-            
-        }
-        else{
-            total- (Grama / 100) * 3.50;
-        }
-        SetResultado(total);
+        if(Grama<=0){
+            SetResultado('Peso Inválido')
 
+        }
+
+        else if(Grama >= 1000){
+            total = (Grama / 100) * 3;
+            SetResultado('O total a pagar é R$'+total)
+                      
+        }
+
+        
+        else if(Grama < 1000){
+            total= (Grama / 100) * 3.5;
+            SetResultado('O total a pagar é R$'+total)
+
+        }
+        
+
+        else{
+            SetResultado('Peso Inválido')
+        }
     }
+
+    useEffect(()=>{
+        Calcular();
+    },[])
 
     return (
         <main>
