@@ -1,39 +1,27 @@
 import './index.scss'
 import { useEffect, useState } from "react";
+import Calcular from '../../service/grama';
+
 
 export default function Grama() {
     const[Grama, SetGrama ] = useState(0);
     const[Resultado, SetResultado] = useState(0);
 
-    function Calcular(){
-        let total = 0;
+    function Final() {
 
-        if(Grama<=0){
-            SetResultado('Peso Inválido')
-
-        }
-
-        else if(Grama >= 1000){
-            total = (Grama / 100) * 3;
-            SetResultado('O total a pagar é R$'+total)
-                      
-        }
-
-        
-        else if(Grama < 1000){
-            total= (Grama / 100) * 3.5;
-            SetResultado('O total a pagar é R$'+total)
-
+        try {
+            let J=Calcular(Grama);
+        SetResultado(J)
+        } catch (err) {
+            alert(err.message)
         }
         
-
-        else{
-            SetResultado('Peso Inválido')
-        }
     }
 
+
+
     useEffect(()=>{
-        Calcular();
+        Final();
     },[])
 
     return (
@@ -45,7 +33,7 @@ export default function Grama() {
                 </div>
               
                 <div>
-                    <button onClick={Calcular}>Calcular</button>
+                    <button onClick={Final}>Calcular</button>
 
                     <p> {Resultado} </p>
                 </div>

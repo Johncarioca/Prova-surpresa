@@ -1,4 +1,6 @@
 import {  useEffect, useState } from "react";
+import Calcular from "../../service/acai";
+
 
 export default function Acai() {
 
@@ -8,17 +10,20 @@ export default function Acai() {
     const [Desconto, SetDesconto] = useState(0);
     const [Resultado, SetResultado] = useState(0);
 
-    function Calcular(){
-        let total = Pequeno * 13.50 + Medio * 15 + Grande * 17.50;
-        let desc =  total*Desconto / 100;
-        let resul = total - desc;
-        SetResultado('Total a pagar é R$'+resul);
-
+    function Final() {
+        try {
+            let J=Calcular(Pequeno,Medio,Grande,Desconto)
+            SetResultado(J);    
+        } catch (err) {
+            alert(err.message)
+        }
+        
+        
     }
 
 
     useEffect(()=> {
-        Calcular();
+        Final();
     },[Pequeno,Medio,Grande,Desconto])
     
 
@@ -41,7 +46,7 @@ export default function Acai() {
                 <input type="text" value={Desconto} onChange={e => SetDesconto(Number(e.target.value))}/>
             </div>
             <div>
-                <button onClick={Calcular}>Calcular</button> 
+                <button onClick={Final}>Calcular</button> 
 
                 <p>{Resultado} </p>
             </div>
