@@ -29,8 +29,8 @@ export default function Signo() {
 
 
     return (
-        <main>
-            <section>
+        <main className="signo">
+            <section className='meio'>
 
                 <h1>Veficação do signo de Líbras</h1>
                 <div>

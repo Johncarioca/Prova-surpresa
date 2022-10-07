@@ -1,6 +1,6 @@
 import {  useEffect, useState } from "react";
 import Calcular from "../../service/acai";
-
+import './index.scss';
 
 export default function Acai() {
 
@@ -28,7 +28,8 @@ export default function Acai() {
     
 
     return (
-        <section>
+        <main className="acai">
+        <section className="meio">
             <div>
                 <p>QTD.Pequeno</p>
                 <input type="text" value={Pequeno} onChange={e => SetPequeno(Number(e.target.value))}/>
@@ -51,5 +52,6 @@ export default function Acai() {
                 <p>{Resultado} </p>
             </div>
         </section>
+        </main>
     );
 }

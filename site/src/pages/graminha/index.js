@@ -25,8 +25,8 @@ export default function Grama() {
     },[])
 
     return (
-        <main>
-            <section>
+        <main className="grama">
+            <section className="meio">
                 <div>
                     <p>QTD.Grama</p>
                     <input type="text" value={Grama} onChange={e => SetGrama(Number(e.target.value))} />
