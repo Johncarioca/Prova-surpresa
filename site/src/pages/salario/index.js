@@ -11,8 +11,13 @@ export default function Salario() {
 
 
     function Calcular(){
-        const f =  CalcularSalario(SalarioBase,Bonus,Desc)
-        SetResultado(f);
+        try {
+            const f =  CalcularSalario(SalarioBase,Bonus,Desc)
+            SetResultado(f);            
+        } catch (err) {
+            alert(err.message);
+        }
+
     }
 
 

@@ -10,6 +10,8 @@ import Signo from './pages/signo';
 import Febre from './pages/Febre';
 import Salario from './pages/salario';
 import Paradas from './pages/paradas';
+import Ingresso from './pages/ingresso';
+import Orcamento from './pages/orcamento';
 
 
 
@@ -25,6 +27,8 @@ root.render(
       <Route path='/febre' element={<Febre />} />
       <Route path='/salario' element={<Salario />} />
       <Route path='/paradas' element={<Paradas />} />
+      <Route path='/ingresso' element={<Ingresso />} />
+      <Route path='/orcamento' element={<Orcamento />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

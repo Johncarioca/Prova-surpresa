@@ -10,8 +10,10 @@ export default function Home(){
                 <a href="./grama">grama</a><br/>
                 <a href="./signo">signo</a> <br/>
                 <a href="./febre">Febre</a><br/>
-                <a href="./salario"> Verificar Salário</a> <br/>
-                <a href="./paradas"> Quantas Paradas?</a> 
+                <a href="./salario">Verificar Salário</a> <br/>
+                <a href="./paradas">Quantas Paradas?</a> <br/>
+                <a href="./ingresso">Ingresso</a> <br/>
+                <a href="./orcamento">Orçamento</a>
 
             </div>
                 
