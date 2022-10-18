@@ -12,7 +12,9 @@ import Salario from './pages/salario';
 import Paradas from './pages/paradas';
 import Ingresso from './pages/ingresso';
 import Orcamento from './pages/orcamento';
-
+import Contar from './pages/repetição/funcaoContar1';
+import Contar2 from './pages/repetição/funcaoContar2';
+import Contar3 from './pages/repetição/funcaoContar3';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +31,9 @@ root.render(
       <Route path='/paradas' element={<Paradas />} />
       <Route path='/ingresso' element={<Ingresso />} />
       <Route path='/orcamento' element={<Orcamento />} />
+      <Route path='/conta' element={<Contar />} />
+      <Route path='/conta2' element={<Contar2 />} />
+      <Route path='/conta3' element={<Contar3 />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

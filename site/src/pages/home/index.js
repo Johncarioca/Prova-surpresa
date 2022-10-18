@@ -13,7 +13,10 @@ export default function Home(){
                 <a href="./salario">Verificar Salário</a> <br/>
                 <a href="./paradas">Quantas Paradas?</a> <br/>
                 <a href="./ingresso">Ingresso</a> <br/>
-                <a href="./orcamento">Orçamento</a>
+                <a href="./orcamento">Orçamento</a> <br/>
+                <a href="./conta">Array</a><br/>
+                <a href="./conta2">Asterisco</a> <br/>
+                <a href="./conta3">aaaaaaaaa</a>
 
             </div>
                 
