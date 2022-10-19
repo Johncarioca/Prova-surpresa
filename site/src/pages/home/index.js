@@ -16,7 +16,7 @@ export default function Home(){
                 <a href="./orcamento">Orçamento</a> <br/>
                 <a href="./conta">Array</a><br/>
                 <a href="./conta2">Asterisco</a> <br/>
-                <a href="./conta3">aaaaaaaaa</a>
+                <a href="./conta3">Diversos Estilos</a>
 
             </div>
                 
