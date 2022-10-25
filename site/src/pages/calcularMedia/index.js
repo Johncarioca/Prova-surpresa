@@ -1,70 +1,43 @@
 import './index.scss'
-import Media from '../../service/calculoMedia/media.js';
+import { calcularMedia } from '../../service/calculoMedia/index';
+import { Alunos } from '../../service/calculoMedia/aluno';
 import { useState } from 'react';
 
+export default function Index() {
 
-export default function Medias() {
-    const [Alunos, SetAlunos] = useState(0);
-    const [RespMedia, SetRespMedia] = useState(0);
-    const [RespMaior, SetRespMaior] = useState(0);
-    const [RespMenor, SetRespMenor] = useState(0);
-    const [inputs, SetInputs] = useState(0);
-
-
-
-    function Calcular() {
-        try {
-            const f = Media(nota);
-            SetRespMedia(f);
-            SetRespMaior(f);
-            SetRespMenor(f);
-        } catch (err) {
-            alert(err.message);
-        }
-
+    const [qtdAluno, setQtdAluno] = useState(0);
+    const [alunos, setAlunos] = useState([]);
+    const [notaAluno, setNotaAluno] = useState([]);
+    const [res, setRes] = useState()
+    let array = []
+    
+    function gerarAlunos() {
+        const resp = Alunos(qtdAluno);
+        setAlunos(resp)
     }
 
+    
+    console.log(notaAluno);
 
-    return (
+    return(
         <main>
+            <h1>ALunos</h1>
+            <p>Quantidade de alunos: <input type="number" value={qtdAluno} onChange={e=> setQtdAluno(e.target.value)} /> <button onClick={gerarAlunos}>OK</button> </p>
+            {alunos.map((item, index) => (
+                <div>
+                    <p>Aluno {item} <input type="number" value={notaAluno[index]} onChange={e => {
+                          
+                            array[index] = Number(e.target.value)
+                           console.log(array)
+                           
+                            
+                    }} /></p>
+                </div>
+            ))
 
-            <h1>Nota da Sala</h1>
-
-            <label id='1'>
-                QTD.Alunos
-            </label>
-
-            <input id='1' type='number' />
-{/* 
-            {inputs.map(item=>
-                <tr>
-                    <label id={item.indice}>Aluno {item.indice}</label>
-                    <input type="number" id={item.indice} />
-                </tr>
-            )}; */}
-
-
-
-
-
-
-            <button onClick={Calcular}>Calcular</button>
-
-            <div>
-                Média da sala:{RespMedia}
-                Maior nota:{RespMaior}
-                Menor nota:{RespMenor}
-
-
-            </div>
-
-
-
-
-
-
+            }
+            <button onClick={() => setRes(calcularMedia(array ))}>Calcular</button>
+            {res}
         </main>
     );
-
-
 }
