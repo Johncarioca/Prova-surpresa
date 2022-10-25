@@ -17,6 +17,9 @@ import Contar2 from './pages/repetição/funcaoContar2';
 import Contar3 from './pages/repetição/funcaoContar3';
 import QueroCafe from './pages/cafe';
 import Financiamento from './pages/jurosCompostos';
+import Medias from './pages/calcularMedia';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -37,6 +40,7 @@ root.render(
       <Route path='/conta3' element={<Contar3 />} />
       <Route path='/feca' element={<QueroCafe />} />
       <Route path='/juros' element={<Financiamento />} />
+      <Route path='/media' element={<Medias />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

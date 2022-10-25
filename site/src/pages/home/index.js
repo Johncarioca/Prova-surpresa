@@ -18,7 +18,8 @@ export default function Home(){
                 <a href="./conta2">Asterisco</a> <br/>
                 <a href="./conta3">Diversos Estilos</a> <br/>
                 <a href="./feca">Cafezin gostoso</a><br/>
-                <a href="./juros">Financiamento</a>
+                <a href="./juros">Financiamento</a><br/>
+                <a href="./media">Media aluno</a>
 
             </div>
                 
