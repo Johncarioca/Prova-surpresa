@@ -7,8 +7,10 @@ export default function Index() {
 
     const [qtdAluno, setQtdAluno] = useState(0);
     const [alunos, setAlunos] = useState([]);
-    const [notaAluno, setNotaAluno] = useState([]);
-    const [res, setRes] = useState()
+    const []
+    const [respMedia, setRespMedia] = useState([]);
+    const [respMaior, setRespMaior] = useState([]);
+    const [respMenor, setRespMenor] = useState([]);
     let array = []
     
     function gerarAlunos() {
