@@ -1,39 +1,38 @@
-
-export function calcularMedia(array) {
-    try {
-        let s = 0;
-        let q = 0;
-        for (let item of array) {
-            s = item + s;
-            q++;
-        }
-        return s/q; 
-    } catch (err) {
-        return err.message;
+export function criarArray(tamanho) {
+    let notas = [];
+    for (let volta = 1; volta <= tamanho; volta++) {
+        notas.push(0);
     }
+    return notas;
 }
 
-export function maior (array) {
-    try {
-        let x = -1;
-        for (let item of array) {
-            if (item > x) x = item
-        }
-        return x;
-    } catch (err) {
-        return err.message;
+export function calcMedia(notas) {
+    let soma = 0;
+    for (let volta = 0; volta < notas.length; volta++) {
+        soma = soma + notas[volta];
     }
+    let m = soma / notas.length;
+    return m;
 }
 
-export function menor (array) {
-    try {
-        let x = Number.MAX_VALUE;
-        for (let item of array) {
-            if (item < x) x = item;
+export function calcMaior(notas) {
+    let m = 0;
+    for (let volta = 0; volta < notas.length; volta++) {
+        if (notas[volta] > m) {
+            m = notas[volta];
         }
-    } catch (err) {
-        return err.message
     }
+    
+    return m;
 }
 
-
+export function calcMenor(notas) {
+    let m = 11;
+    for (let volta = 0; volta < notas.length; volta++) {
+        if (notas[volta] < m) {
+            m = notas[volta];
+        }
+    }
+    
+    return m;
+}

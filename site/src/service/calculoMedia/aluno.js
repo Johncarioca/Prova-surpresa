@@ -1,12 +1,7 @@
-export function Alunos(num) {
-    try {
-
-        let x = [];
-        for (let i = 1; i <= num; i++) {
-            x = [...x, i];
-        }
-        return x;
-    } catch (err) {
-        return err.message;
+export function Alunos(tamanho) {
+    let notas = [];
+    for (let volta = 1; volta <= tamanho; volta++) {
+        notas.push(0);
     }
+    return notas;
 }
